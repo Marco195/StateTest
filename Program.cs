@@ -15,6 +15,9 @@ namespace StateTest
                 reforma.AplicaDescontoExtra();
                 Console.WriteLine(reforma.Valor);
 
+                reforma.AplicaDescontoExtra();
+                Console.WriteLine(reforma.Valor);
+
                 reforma.Aprova();
 
                 reforma.AplicaDescontoExtra();

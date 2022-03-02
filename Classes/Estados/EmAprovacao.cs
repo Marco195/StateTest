@@ -9,7 +9,13 @@ namespace StateTest.Classes.Estados
     {
         public void AplicaDescontoExtra(Orcamento orcamento)
         {
-            orcamento.Valor -= orcamento.Valor * 0.05;
+            if (!orcamento.Desconto)
+            {
+                orcamento.Valor -= orcamento.Valor * 0.05;
+                orcamento.Desconto = true;
+            }
+            else
+                throw new Exception("Só é possível aplicar desconto apenas uma vez!");
         }
 
         public void Aprova(Orcamento orcamento)
